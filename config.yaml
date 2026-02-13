@@ -31,10 +31,14 @@ data:
   start_date: "2008-01-01"
   end_date: "2024-12-31"
   source: "yfinance"
-  # Current DJIA constituents (survivorship bias caveat documented)
+  # DJIA constituents as of late 2024.
+  # NOTE: WBA (Walgreens) was removed from DJIA and delisted — replaced with AMZN.
+  # Survivorship bias caveat: we use the composition as of end-2024, not historical.
+  # This is documented as a known limitation per Section 0.2 of the blueprint.
   tickers:
     - AAPL
     - AMGN
+    - AMZN
     - AXP
     - BA
     - CAT
@@ -42,7 +46,7 @@ data:
     - CSCO
     - CVX
     - DIS
-    - DOW
+    - NVDA
     - GS
     - HD
     - HON
@@ -61,7 +65,6 @@ data:
     - UNH
     - V
     - VZ
-    - WBA
     - WMT
   # Market/regime data tickers
   market_tickers:
